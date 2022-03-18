@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaaS Website</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <div class="container">
+            <a  class="logo" href="#"><span>Remember</span>That</a>
+            
+            <img id="mobile-cta" class="mobile-menu" src="images/menu.svg" alt="hamburger menu"> <!--id se stava za rabota so JavaScript i se stava ova svg nadvor od nav, class za css se razbira-->
+
+            <nav>
+                <img id="mobile-exit" class="mobile-menu-exit" src="images/exit.svg" alt="closing button"> <!--Sekogash koga pravish meni za phone, mora da ima vakvo iks svg kopche za da se iskluchi menito koga kje bide pushteno, se pravi vo js isto taka i se stava vo nav delot-->
+                
+                <ul class="primary-nav">
+                    <li class="currentpage"><a href="#">Home</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">Pricing</a></li>
+                </ul>
+
+                <ul class="secondary-nav">
+                    <li><a href="#">Contact</a></li>
+                    <li class="go-premium"><a href="#">Go Premium</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="container">
+            <div class="left-col">
+                <p class="subhead">It's Nitty &amp; Gritty</p>
+                <h1>A Task App That Doesn't Stink</h1>
+
+                <div class="hero-cta">
+                    <a href="#" class="primary-cta">Try For FREE</a>
+                    <a href="#" class="watch-video">
+                        <img src="images/watch.svg" alt="watch a video">Watch a video here
+                    </a>
+                </div>
+            </div>
+
+            <img src="images/illustration.svg" class="hero-image" alt="illustration">
+
+        </div>
+    </section>
+
+    <section class="features-section">
+        <div class="container">
+            <ul class="features-list">
+                <li>Unlimited Tasks</li>
+                <li>SMS Task Remainders</li>
+                <li>Confetti Explosion upon Task Completions</li>
+                <li>Social Media Announments</li>
+                <li>Real Time Collaboration</li>
+                <li>Many more awesome features</li>
+            </ul>
+
+            <img src="images/holding-phone.jpg" alt="man holding phone">
+        </div>
+    </section>
+
+    <section class="testimonials-section">
+        <div class="container">
+            <ul>
+                <li>
+                    <img src="images/person.jpg" alt="">
+
+                    <blockquote>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet perspiciatis id labore distinctio tenetur est magnam esse eaque, totam ipsum.</blockquote>
+
+                    <cite>John McQueen</cite>
+                </li>
+
+                <li>
+                    <img src="images/person.jpg" alt="">
+
+                    <blockquote>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet perspiciatis id labore distinctio tenetur est magnam esse eaque, totam ipsum.</blockquote>
+
+                    <cite>John McQueen</cite>
+                </li>
+
+                <li>
+                    <img src="images/person.jpg" alt="">
+
+                    <blockquote>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet perspiciatis id labore distinctio tenetur est magnam esse eaque, totam ipsum.</blockquote>
+
+                    <cite>John McQueen</cite>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-left">
+                <h2>Contact</h2>
+
+                <form action="">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name">
+                    
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+
+                    <input type="submit" class="send-message-cta" value="Send message">
+                </form>
+            </div>
+
+            <div class="contact-right">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d423284.6897532054!2d-118.41173249999999!3d34.020479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c75ddc27da13%3A0xe22fdf6f254608f4!2sLos%20Angeles%2C%20CA%2C%20USA!5e0!3m2!1sen!2smk!4v1647633082040!5m2!1sen!2smk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        const mobileBtn = document.getElementById('mobile-cta')
+        nav = document.querySelector('nav')
+        mobileBtnExit = document.getElementById('mobile-exit');
+
+        mobileBtn.addEventListener('click', () => {
+            nav.classList.add('mobile-menu'); /*vaka se pushta menito*/
+        })
+
+        mobileBtnExit.addEventListener('click', () => {
+            nav.classList.remove('mobile-menu'); /*vaka se gasi menito*/
+        })
+    </script>
+
+
+</body>
+</html>
